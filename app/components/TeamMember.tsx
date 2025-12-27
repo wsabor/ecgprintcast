@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import { FaInstagram, FaLinkedin } from 'react-icons/fa';
+import Image from "next/image";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
 interface TeamMemberProps {
   name: string;
@@ -9,21 +9,22 @@ interface TeamMemberProps {
   linkedin: string;
 }
 
-export default function TeamMember({ name, photo, bio, instagram, linkedin }: TeamMemberProps) {
+export default function TeamMember({
+  name,
+  photo,
+  bio,
+  instagram,
+  linkedin,
+}: TeamMemberProps) {
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
-      <div className="relative w-48 h-48 mb-4 rounded-full overflow-hidden">
-        <Image
-          src={photo}
-          alt={name}
-          fill
-          className="object-cover"
-        />
+    <div className="flex flex-col items-center rounded-2xl bg-white p-6 text-center shadow-lg transition-transform duration-300 hover:scale-105">
+      <div className="relative mb-4 h-48 w-48 overflow-hidden rounded-full">
+        <Image src={photo} alt={name} fill className="object-cover" />
       </div>
 
-      <h3 className="text-2xl font-bold text-gray-800 mb-3">{name}</h3>
+      <h3 className="mb-3 text-3xl font-bold text-gray-800">{name}</h3>
 
-      <p className="text-gray-600 mb-6 flex-grow">{bio}</p>
+      <p className="mb-6 flex-grow text-lg text-gray-600">{bio}</p>
 
       <div className="flex gap-4">
         <a
@@ -31,7 +32,7 @@ export default function TeamMember({ name, photo, bio, instagram, linkedin }: Te
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`Instagram ${name}`}
-          className="text-pink-600 hover:text-pink-700 transition-colors text-2xl"
+          className="text-2xl text-pink-600 transition-colors hover:text-pink-700"
         >
           <FaInstagram />
         </a>
@@ -40,7 +41,7 @@ export default function TeamMember({ name, photo, bio, instagram, linkedin }: Te
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`LinkedIn ${name}`}
-          className="text-blue-600 hover:text-blue-700 transition-colors text-2xl"
+          className="text-2xl text-blue-600 transition-colors hover:text-blue-700"
         >
           <FaLinkedin />
         </a>

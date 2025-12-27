@@ -1,12 +1,12 @@
-import Image from 'next/image';
-import SocialLinks from './SocialLinks';
+import Image from "next/image";
+import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#bde4db] py-16">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center gap-10">
-          <div className="relative w-[350px] h-[100px] md:w-[400px] md:h-[120px]">
+    <footer className="bg-[#e5e5e5] pt-24 pb-8">
+      <div className="max-w-9xl container mx-auto px-4">
+        <div className="flex flex-col items-center gap-6">
+          <div className="relative h-[100px] w-[350px] md:h-[120px] md:w-[400px]">
             <Image
               src="/images/slogan.webp"
               alt="ECG PrintCast"
@@ -15,29 +15,27 @@ export default function Footer() {
             />
           </div>
 
-          <SocialLinks variant="default" />
+          <SocialLinks variant="large" />
+        </div>
 
-          <div className="text-center pt-8 w-full max-w-4xl border-t border-gray-400/30">
+        <div className="mt-8 flex items-center justify-between border-t border-gray-400/30 pt-8 text-center">
+          <div className="text-center text-lg text-gray-600">
+            <p>
+              &copy; {new Date().getFullYear()} ECG PrintCast. Todos os direitos
+              reservados.
+            </p>
+          </div>
+          <div className="">
             <a
-              href="https://wsabor.com"
+              href="https://wsabor.dev"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex flex-col md:flex-row items-center gap-3 text-gray-700 hover:text-gray-900 transition-colors group"
+              className="text-gray-700 transition-colors hover:text-gray-900 md:flex-row"
             >
-              <span className="text-base md:text-lg font-medium">Desenvolvido por</span>
-              <div className="relative w-[120px] h-[32px] md:w-[140px] md:h-[36px] group-hover:scale-105 transition-transform">
-                <Image
-                  src="/images/logo-wsabor.png"
-                  alt="wsabor.com"
-                  fill
-                  className="object-contain"
-                />
-              </div>
+              <span className="text-base font-medium md:text-xl">
+                Desenvolvido por wsabor.dev
+              </span>
             </a>
-          </div>
-
-          <div className="text-center text-gray-600 text-sm">
-            <p>&copy; {new Date().getFullYear()} ECG PrintCast. Todos os direitos reservados.</p>
           </div>
         </div>
       </div>

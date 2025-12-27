@@ -1,41 +1,37 @@
-import { FaYoutube, FaSpotify, FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FaYoutube, FaSpotify, FaInstagram } from "react-icons/fa";
 
 interface SocialLinksProps {
-  variant?: 'default' | 'large';
+  variant?: "default" | "large";
 }
 
-export default function SocialLinks({ variant = 'default' }: SocialLinksProps) {
+export default function SocialLinks({ variant = "default" }: SocialLinksProps) {
   const links = [
     {
-      name: 'YouTube',
-      url: 'https://www.youtube.com/@ecgprintcast',
+      name: "YouTube",
+      url: "https://www.youtube.com/@ecgprintcast",
       icon: FaYoutube,
-      color: 'hover:bg-red-600',
+      color: "hover:bg-red-600",
     },
     {
-      name: 'Spotify',
-      url: 'https://open.spotify.com/show/4vtLgRAvS7AsFfPowGgwdG',
+      name: "Spotify",
+      url: "https://open.spotify.com/show/4vtLgRAvS7AsFfPowGgwdG",
       icon: FaSpotify,
-      color: 'hover:bg-green-500',
+      color: "hover:bg-green-500",
     },
     {
-      name: 'Instagram',
-      url: 'https://www.instagram.com/ecg.printcast/',
+      name: "Instagram",
+      url: "https://www.instagram.com/print.cast/",
       icon: FaInstagram,
-      color: 'hover:bg-pink-600',
-    },
-    {
-      name: 'Facebook',
-      url: 'https://www.facebook.com/ecgprintcast/',
-      icon: FaFacebook,
-      color: 'hover:bg-blue-600',
+      color: "hover:bg-pink-600",
     },
   ];
 
-  const sizeClasses = variant === 'large' ? 'text-4xl p-4' : 'text-2xl p-3';
+  // Controle detalhado de tamanhos
+  const iconSize = variant === "large" ? "text-5xl" : "text-4xl";
+  const circleSize = variant === "large" ? "w-20 h-20" : "w-16 h-16";
 
   return (
-    <div className="flex gap-4 justify-center flex-wrap">
+    <div className="flex flex-wrap justify-center gap-6">
       {links.map((link) => {
         const Icon = link.icon;
         return (
@@ -45,7 +41,7 @@ export default function SocialLinks({ variant = 'default' }: SocialLinksProps) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={link.name}
-            className={`${sizeClasses} bg-white rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 ${link.color} hover:text-white`}
+            className={`${circleSize} ${iconSize} transform rounded-full bg-white shadow-lg transition-all duration-300 hover:scale-110 ${link.color} flex items-center justify-center hover:text-white`}
           >
             <Icon />
           </a>

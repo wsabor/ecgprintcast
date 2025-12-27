@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import { FaInstagram, FaExternalLinkAlt } from 'react-icons/fa';
+import Image from "next/image";
+import { FaInstagram, FaExternalLinkAlt } from "react-icons/fa";
 
 interface SponsorProps {
   name: string;
@@ -9,27 +9,28 @@ interface SponsorProps {
   website: string;
 }
 
-export default function Sponsor({ name, logo, description, instagram, website }: SponsorProps) {
+export default function Sponsor({
+  name,
+  logo,
+  description,
+  instagram,
+  website,
+}: SponsorProps) {
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
-      <div className="relative w-40 h-40 mb-4">
-        <Image
-          src={logo}
-          alt={name}
-          fill
-          className="object-contain"
-        />
+    <div className="flex h-full min-h-[400px] flex-col items-center rounded-2xl bg-white p-6 text-center shadow-lg transition-transform duration-300 hover:scale-105">
+      <div className="relative mb-4 h-60 w-60 flex-shrink-0">
+        <Image src={logo} alt={name} fill className="object-contain" />
       </div>
 
-      <p className="text-gray-600 mb-6 flex-grow text-sm">{description}</p>
+      <p className="mb-6 flex-grow text-xl text-gray-600">{description}</p>
 
-      <div className="flex gap-4">
+      <div className="mt-auto flex items-center gap-4">
         <a
           href={instagram}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`Instagram ${name}`}
-          className="text-pink-600 hover:text-pink-700 transition-colors text-xl"
+          className="text-3xl text-pink-600 transition-colors hover:text-pink-700"
         >
           <FaInstagram />
         </a>
@@ -38,7 +39,7 @@ export default function Sponsor({ name, logo, description, instagram, website }:
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`Site ${name}`}
-          className="text-blue-600 hover:text-blue-700 transition-colors text-xl"
+          className="flex text-2xl text-blue-600 transition-colors hover:text-blue-700"
         >
           <FaExternalLinkAlt />
         </a>
