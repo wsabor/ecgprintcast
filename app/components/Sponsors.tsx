@@ -34,7 +34,7 @@ export default function Sponsors() {
       name: "Eurostar Gráficos",
       logo: "/images/sponsors/eurostar.webp",
       description:
-        "Com mais de 50 anos de história, a Eurostar mantém o desafio contínuo de fabricar, importar, desenvolver novos mercados, atender com produtos de qualidade, assim como permanecer em constante busca de inovações, objetivando atender a área gráfica de forma eficaz.",
+        "Com mais de 50 anos de história, a Eurostar mantém o desafio de fabricar, importar, desenvolver novos mercados e atender com produtos de qualidade, buscando constantemente inovações para atender a área gráfica de forma eficaz.",
       instagram: "https://www.instagram.com/duplicopyeurostar/",
       website: "http://eurostargraficos.com.br/",
     },
