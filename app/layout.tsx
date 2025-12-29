@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "ECG PrintCast",
     images: [
       {
-        url: "/images/og-image.png",
+        url: "https://ecgprintcast.com.br/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "ECG PrintCast - O podcast queridinho da indústria gráfica",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: "ECG PrintCast - O podcast queridinho da indústria gráfica!",
     description:
       "O podcast queridinho da indústria gráfica! Novos episódios toda quinta-feira às 19h.",
-    images: ["/images/og-image.png"],
+    images: ["https://ecgprintcast.com.br/images/og-image.png"],
   },
   robots: {
     index: true,
