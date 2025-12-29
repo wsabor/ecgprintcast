@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+NEWSLETTER_SETUP.md
+QUICK_START.md
+GOOGLE_SEARCH_CONSOLE.md
