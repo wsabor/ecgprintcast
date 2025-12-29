@@ -81,10 +81,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <head>
-        <PodcastSchema />
-      </head>
       <body className={roboto.className}>
+        <PodcastSchema />
         {children}
       </body>
     </html>
