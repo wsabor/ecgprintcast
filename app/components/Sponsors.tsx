@@ -31,20 +31,20 @@ export default function Sponsors() {
       website: "http://www.croma.com.br/",
     },
     {
-      name: "Duplicopy/Eurostar",
-      logo: "/images/sponsors/duplicopy.webp",
+      name: "Eurostar Gráficos",
+      logo: "/images/sponsors/eurostar.webp",
       description:
-        "Com mais de 45 anos de história, a Eurostar mantém o desafio contínuo de fabricar, importar, desenvolver novos mercados, atender com produtos de qualidade, assim como permanecer em constante busca de inovações, objetivando atender a área gráfica de forma eficaz.",
+        "Com mais de 50 anos de história, a Eurostar mantém o desafio contínuo de fabricar, importar, desenvolver novos mercados, atender com produtos de qualidade, assim como permanecer em constante busca de inovações, objetivando atender a área gráfica de forma eficaz.",
       instagram: "https://www.instagram.com/duplicopyeurostar/",
       website: "http://eurostargraficos.com.br/",
     },
     {
-      name: "Papirus",
-      logo: "/images/sponsors/papirus.webp",
+      name: "Opção Offset",
+      logo: "/images/sponsors/OpcaoOffset.webp",
       description:
-        "Fabricante de papel cartão para embalagens e aplicações gráficas, com fibras recicladas (pós-industrial e pós-consumo) e fibras virgens certificadas e controladas. Nossa linha de produtos tem vida. Empresa B certificada.",
-      instagram: "https://www.instagram.com/papirus_oficial/",
-      website: "https://www.papirus.com/",
+        "Fornecedora de produtos para a indústria gráfica, especializada em chapas offset, produtos químicos, peças e acessórios para máquinas offset.",
+      instagram: "https://www.instagram.com/opcao_offset/",
+      website: "https://www.opcaooffset.com/",
     },
     {
       name: "Topcoat",

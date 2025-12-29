@@ -1,92 +1,77 @@
-# ECG PrintCast
+# ECG PrintCast - Website
 
-O podcast queridinho da indústria gráfica!
+Site oficial do **PrintCast**, o podcast queridinho da indústria gráfica.
 
-## Sobre o Projeto
+## 🚀 Tecnologias
 
-Este projeto é o site oficial do ECG PrintCast, um podcast dedicado à indústria gráfica brasileira. O site foi migrado do WordPress para Next.js, utilizando tecnologias modernas para melhor performance e experiência do usuário.
+- **Next.js 16** - Framework React
+- **React 19** - Biblioteca UI
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS 4** - Estilização
+- **React Icons** - Ícones
+- **Resend** - Envio de emails (Newsletter)
+- **YouTube Data API v3** - Integração com vídeos
 
-## Tecnologias Utilizadas
+## ✨ Funcionalidades
 
-- **Next.js 16** - Framework React para produção
-- **React 19** - Biblioteca JavaScript para interfaces
-- **TypeScript** - Tipagem estática para JavaScript
-- **Tailwind CSS 4** - Framework CSS utilitário
-- **React Icons** - Biblioteca de ícones
+✅ Design responsivo (mobile-first)  
+✅ Header fixo com navegação  
+✅ Hero section fullscreen  
+✅ Formulário de newsletter funcional  
+✅ Carrossel automático de patrocinadores  
+✅ Integração com YouTube (últimos 8 vídeos)  
+✅ Seção sobre o podcast  
+✅ Apresentação da equipe  
+✅ Formulário de contato  
+✅ Links para redes sociais  
 
-## Estrutura do Projeto
-
-```
-app/
-├── components/          # Componentes reutilizáveis
-│   ├── Header.tsx      # Cabeçalho com navegação
-│   ├── Hero.tsx        # Seção principal
-│   ├── SocialLinks.tsx # Links para redes sociais
-│   ├── About.tsx       # Sobre o PrintCast
-│   ├── Team.tsx        # Seção da equipe
-│   ├── TeamMember.tsx  # Card de membro da equipe
-│   ├── Sponsors.tsx    # Seção de patrocinadores
-│   ├── Sponsor.tsx     # Card de patrocinador
-│   ├── Contact.tsx     # Seção de contato
-│   └── Footer.tsx      # Rodapé
-├── layout.tsx          # Layout raiz
-├── page.tsx            # Página principal
-└── globals.css         # Estilos globais
-
-public/
-└── images/             # Imagens do site
-    ├── team/          # Fotos da equipe
-    └── sponsors/      # Logos dos patrocinadores
-```
-
-## Como Executar
-
-1. **Instalar dependências:**
-   ```bash
-   npm install
-   ```
-
-2. **Executar em desenvolvimento:**
-   ```bash
-   npm run dev
-   ```
-
-3. **Acessar o site:**
-   Abra [http://localhost:3000](http://localhost:3000) no navegador
-
-## Build para Produção
+## 📦 Instalação
 
 ```bash
-npm run build
-npm start
+# Instale as dependências
+npm install
+
+# Configure as variáveis de ambiente
+# Edite o .env.local com suas credenciais
+
+# Rode o servidor de desenvolvimento
+npm run dev
 ```
 
-## Seções do Site
+Acesse: http://localhost:3000
 
-- **Hero** - Apresentação principal com slogan e redes sociais
-- **Sobre** - Informações sobre o podcast
-- **Equipe** - Apresentação dos hosts do podcast
-- **Patrocinadores** - Empresas que apoiam o PrintCast
-- **Contato** - Informações de contato
+## ⚙️ Configuração
 
-## Redes Sociais
+### 1. YouTube API
 
-- [YouTube](https://www.youtube.com/@ecgprintcast)
-- [Spotify](https://open.spotify.com/show/4vtLgRAvS7AsFfPowGgwdG)
-- [Instagram](https://www.instagram.com/ecg.printcast/)
-- [Facebook](https://www.facebook.com/ecgprintcast/)
+Para exibir os últimos episódios do canal, configure a YouTube Data API v3.
 
-## Migração do WordPress
+📖 **Guia completo**: [YOUTUBE_SETUP.md](./YOUTUBE_SETUP.md)
 
-Este projeto foi migrado de um site WordPress existente. Todas as imagens, conteúdos e estrutura foram adaptados para Next.js mantendo fidelidade ao design original.
+### 2. Newsletter (Resend)
 
-## Deploy
+Para receber inscrições da newsletter, configure o Resend.
 
-O site pode ser facilmente implantado em plataformas como:
-- [Vercel](https://vercel.com) (recomendado)
-- [Netlify](https://netlify.com)
-- [AWS Amplify](https://aws.amazon.com/amplify/)
+📖 **Guia completo**: [NEWSLETTER_SETUP.md](./NEWSLETTER_SETUP.md)
 
-## Licença
+## 📝 Scripts
 
-© 2025 ECG PrintCast. Todos os direitos reservados.
+```bash
+npm run dev      # Desenvolvimento
+npm run build    # Build de produção
+npm start        # Iniciar em produção
+npm run lint     # Lint
+```
+
+## 🚢 Deploy
+
+Recomendado: **Vercel**
+
+1. Faça push para GitHub
+2. Importe na Vercel
+3. Configure as variáveis de ambiente
+4. Deploy automático!
+
+---
+
+Desenvolvido com ❤️ para a indústria gráfica

@@ -3,9 +3,18 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full bg-white shadow-md">
+    <header className="top-0 z-50 w-full bg-white shadow-md md:sticky">
       <div className="max-w-9xl container mx-auto flex items-center justify-between px-4 py-3">
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center gap-2">
+          <div className="relative h-[60px] w-[160px]">
+            <Image
+              src="/images/logo_TV-Abigraf.png"
+              alt="TV Abigraf"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
           <div className="relative h-[60px] w-[200px]">
             <Image
               src="/images/logo.png"

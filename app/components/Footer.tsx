@@ -6,9 +6,9 @@ export default function Footer() {
     <footer className="bg-[#e5e5e5] pt-24 pb-8">
       <div className="max-w-9xl container mx-auto px-4">
         <div className="flex flex-col items-center gap-6">
-          <div className="relative h-[100px] w-[350px] md:h-[120px] md:w-[400px]">
+          <div className="relative h-[180px] w-[340px] md:h-[200px] md:w-[400px]">
             <Image
-              src="/images/slogan.webp"
+              src="/images/logo_TVA-PC.webp"
               alt="ECG PrintCast"
               fill
               className="object-contain drop-shadow-lg"
@@ -18,7 +18,7 @@ export default function Footer() {
           <SocialLinks variant="large" />
         </div>
 
-        <div className="mt-8 flex items-center justify-between border-t border-gray-400/30 pt-8 text-center">
+        <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-gray-400/30 pt-8 text-center md:flex-row">
           <div className="text-center text-lg text-gray-600">
             <p>
               &copy; {new Date().getFullYear()} ECG PrintCast. Todos os direitos
