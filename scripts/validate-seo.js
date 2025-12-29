@@ -137,7 +137,8 @@ try {
 
   const requiredFields = ['name', 'description', 'url', 'image', 'author', 'publisher', 'sameAs'];
   requiredFields.forEach(field => {
-    if (schemaContent.includes(`"${field}"`)) {
+    // Aceita tanto "field": (JSON) quanto field: (TypeScript object)
+    if (schemaContent.includes(`"${field}"`) || schemaContent.includes(`${field}:`)) {
       log.success(`Campo obrigatório "${field}" presente`);
     } else {
       log.error(`Campo obrigatório "${field}" ausente`);
