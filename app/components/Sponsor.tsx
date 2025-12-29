@@ -17,12 +17,14 @@ export default function Sponsor({
   website,
 }: SponsorProps) {
   return (
-    <div className="flex h-full min-h-[400px] flex-col items-center rounded-2xl bg-white p-6 text-center shadow-lg transition-transform duration-300 hover:scale-105">
-      <div className="relative mb-4 h-60 w-60 flex-shrink-0">
+    <div className="flex h-[640px] flex-col items-center gap-2 rounded-2xl bg-white p-5 text-center shadow-lg transition-transform duration-300 hover:scale-105 md:h-[520px]">
+      <div className="relative h-56 w-56 flex-shrink-0">
         <Image src={logo} alt={name} fill className="object-contain" />
       </div>
 
-      <p className="mb-6 flex-grow text-xl text-gray-600">{description}</p>
+      <p className="flex-grow overflow-hidden text-lg text-gray-600">
+        {description}
+      </p>
 
       <div className="mt-auto flex items-center gap-4">
         <a

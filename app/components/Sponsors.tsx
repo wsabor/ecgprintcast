@@ -57,16 +57,19 @@ export default function Sponsors() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const itemsPerView = 3; // Mostra 3 cards por vez no desktop
 
-  // Auto-rotate a cada 5 segundos
+  // Auto-rotate a cada 5 segundos (pausa quando isPaused = true)
   useEffect(() => {
+    if (isPaused) return; // Não roda o intervalo se estiver pausado
+
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % sponsors.length);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [sponsors.length]);
+  }, [sponsors.length, isPaused]);
 
   // Função para pegar os 3 cards visíveis (com loop infinito)
   const getVisibleSponsors = () => {
@@ -88,9 +91,12 @@ export default function Sponsors() {
   };
 
   return (
-    <section id="patrocinadores" className="bg-[#e5e5e5] px-4 py-24">
+    <section
+      id="patrocinadores"
+      className="bg-[#e5e5e5] px-6 py-12 md:px-4 md:py-24"
+    >
       <div className="container mx-auto max-w-7xl">
-        <h2 className="mb-16 text-center text-4xl font-bold text-gray-800 md:text-5xl">
+        <h2 className="mb-8 text-center text-4xl font-bold text-gray-800 md:mb-12 md:text-5xl">
           Patrocinadores
         </h2>
 
@@ -106,7 +112,11 @@ export default function Sponsors() {
               <FaChevronLeft className="text-xl" />
             </button>
 
-            <div className="grid grid-cols-3 gap-12">
+            <div
+              className="grid grid-cols-3 gap-12"
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+            >
               {getVisibleSponsors().map((sponsor, idx) => (
                 <div
                   key={`${sponsor.name}-${currentIndex}-${idx}`}
@@ -150,13 +160,19 @@ export default function Sponsors() {
             {/* Botão Anterior Mobile */}
             <button
               onClick={handlePrev}
-              className="absolute top-1/2 left-0 z-10 flex h-10 w-10 -translate-x-2 -translate-y-1/2 items-center justify-center rounded-full bg-gray-800 text-white shadow-lg transition-all hover:bg-gray-700"
+              className="absolute top-1/2 left-0 z-10 flex h-10 w-10 -translate-x-2 -translate-y-1/2 items-center justify-center rounded-full bg-gray-400 text-white shadow-lg transition-all hover:bg-gray-500"
               aria-label="Patrocinador anterior"
             >
               <FaChevronLeft className="text-lg" />
             </button>
 
-            <div className="flex justify-center px-12">
+            <div
+              className="flex justify-center px-12"
+              onTouchStart={() => setIsPaused(true)}
+              onTouchEnd={() => setIsPaused(false)}
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+            >
               <div className="w-full max-w-md transition-opacity duration-500">
                 <Sponsor {...sponsors[currentIndex]} />
               </div>
@@ -165,7 +181,7 @@ export default function Sponsors() {
             {/* Botão Próximo Mobile */}
             <button
               onClick={handleNext}
-              className="absolute top-1/2 right-0 z-10 flex h-10 w-10 translate-x-2 -translate-y-1/2 items-center justify-center rounded-full bg-gray-800 text-white shadow-lg transition-all hover:bg-gray-700"
+              className="absolute top-1/2 right-0 z-10 flex h-10 w-10 translate-x-2 -translate-y-1/2 items-center justify-center rounded-full bg-gray-400 text-white shadow-lg transition-all hover:bg-gray-500"
               aria-label="Próximo patrocinador"
             >
               <FaChevronRight className="text-lg" />

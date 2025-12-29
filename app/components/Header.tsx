@@ -4,9 +4,9 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className="top-0 z-50 w-full bg-white shadow-md md:sticky">
-      <div className="max-w-9xl container mx-auto flex items-center justify-between px-4 py-3">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="relative h-[60px] w-[160px]">
+      <div className="max-w-9xl container mx-auto flex items-center justify-center px-4 py-3 md:justify-between">
+        <Link href="/" className="flex items-center gap-4">
+          <div className="relative h-[50px] w-[130px] md:h-[60px] md:w-[160px]">
             <Image
               src="/images/logo_TV-Abigraf.png"
               alt="TV Abigraf"
@@ -15,7 +15,7 @@ export default function Header() {
               priority
             />
           </div>
-          <div className="relative h-[60px] w-[200px]">
+          <div className="relative h-[50px] w-[150px] md:h-[60px] md:w-[200px]">
             <Image
               src="/images/logo.png"
               alt="ECG PrintCast"
@@ -25,7 +25,7 @@ export default function Header() {
             />
           </div>
         </Link>
-        <nav className="hidden gap-6 md:flex">
+        <nav className="hidden md:flex md:gap-4">
           <a
             href="#top"
             className="text-xl font-medium text-gray-700 transition-colors hover:text-blue-600"

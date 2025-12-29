@@ -3,10 +3,10 @@ import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#e5e5e5] pt-24 pb-8">
+    <footer className="bg-[#e5e5e5] pt-12 pb-8 md:pt-24">
       <div className="max-w-9xl container mx-auto px-4">
         <div className="flex flex-col items-center gap-6">
-          <div className="relative h-[180px] w-[340px] md:h-[200px] md:w-[400px]">
+          <div className="relative h-[160px] w-[300px] md:h-[200px] md:w-[360px]">
             <Image
               src="/images/logo_TVA-PC.webp"
               alt="ECG PrintCast"

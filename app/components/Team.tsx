@@ -26,9 +26,9 @@ export default function Team() {
   ];
 
   return (
-    <section id="equipe" className="bg-[#bde4db] px-4 py-24">
+    <section id="equipe" className="bg-[#bde4db] px-6 py-12 md:px-4 md:py-24">
       <div className="container mx-auto max-w-7xl">
-        <h2 className="mb-16 text-center text-4xl font-bold text-gray-800 md:text-5xl">
+        <h2 className="mb-8 text-center text-4xl font-bold text-gray-800 md:mb-12 md:text-5xl">
           Equipe do PrintCast
         </h2>
 

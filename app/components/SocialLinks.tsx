@@ -26,9 +26,9 @@ export default function SocialLinks({ variant = "default" }: SocialLinksProps) {
     },
   ];
 
-  // Controle detalhado de tamanhos
-  const iconSize = variant === "large" ? "text-5xl" : "text-4xl";
-  const circleSize = variant === "large" ? "w-20 h-20" : "w-16 h-16";
+  // Controle detalhado de tamanhos com responsividade
+  const iconSize = variant === "large" ? "text-4xl md:text-5xl" : "text-4xl";
+  const circleSize = variant === "large" ? "h-16 w-16 md:h-20 md:w-20" : "h-16 w-16";
 
   return (
     <div className="flex flex-wrap justify-center gap-6">

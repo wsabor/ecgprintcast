@@ -8,7 +8,7 @@ export default async function LastEpisodes() {
   return (
     <>
       {/* Seção de últimos episódios - Background azul escuro */}
-      <section className="bg-[#2c4f6f] px-4 py-24">
+      <section className="bg-[#2c4f6f] px-6 py-12 md:px-4 md:py-24">
         <div className="max-w-9xl container mx-auto">
           <h2 className="mb-4 text-center text-4xl font-bold text-white md:text-5xl">
             Últimos episódios do PrintCast

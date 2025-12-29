@@ -4,11 +4,11 @@ import NewsletterForm from "./NewsletterForm";
 
 export default function Mic() {
   return (
-    <section className="bg-[#e8f4f0] px-4 py-24">
+    <section className="bg-[#e8f4f0] px-6 py-12 md:px-4 md:py-24">
       <div className="container mx-auto max-w-7xl">
-        <div className="flex flex-col items-center justify-center gap-32 md:flex-row">
+        <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-32">
           {/* Microfone */}
-          <div className="relative h-[325px] w-[200px] flex-shrink-0 md:h-[488px] md:w-[300px]">
+          <div className="relative h-[300px] w-[180px] flex-shrink-0 md:h-[488px] md:w-[300px]">
             <Image
               src="/images/mic.png"
               alt="Microfone PrintCast"

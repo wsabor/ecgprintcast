@@ -4,7 +4,7 @@ export default function About() {
       {/* Seção Sobre - Background verde água claro */}
       <section
         id="sobre"
-        className="relative bg-[#d5ebe5] px-4 py-24"
+        className="relative bg-[#d5ebe5] px-6 py-12 md:px-4 md:py-24"
         style={{
           backgroundImage: "url(/images/icon-mic.png)",
           backgroundPosition: "center center",
@@ -18,14 +18,14 @@ export default function About() {
         <div className="relative z-10 container mx-auto max-w-6xl">
           <div className="flex flex-col items-center">
             {/* Título principal */}
-            <h2 className="mb-12 max-w-4xl text-center text-3xl font-bold text-gray-800 md:text-4xl">
+            <h2 className="mb-8 max-w-4xl text-center text-2xl font-bold text-gray-800 md:text-3xl md:text-4xl">
               PrintCast: conectando a indústria gráfica e fomentando um
               networking valioso!
             </h2>
 
             {/* Conteúdo sobre */}
             <div className="max-w-5xl space-y-6 text-gray-800">
-              <p className="text-justify text-base leading-relaxed md:text-xl">
+              <p className="text-left text-xl leading-relaxed">
                 Bem-vindos ao PrintCast, o{" "}
                 <strong>podcast dedicado à indústria gráfica</strong> e àqueles
                 que são conhecidos e respeitados nesse setor vibrante! Nossa
@@ -38,7 +38,7 @@ export default function About() {
                 entusiastas trocarem ideias, experiências e insights.
               </p>
 
-              <p className="text-justify text-base leading-relaxed md:text-xl">
+              <p className="text-left text-xl leading-relaxed">
                 Ao longo de cada episódio do PrintCast, você terá a oportunidade
                 de{" "}
                 <strong>
@@ -57,7 +57,7 @@ export default function About() {
                 .
               </p>
 
-              <p className="text-justify text-base leading-relaxed md:text-xl">
+              <p className="text-left text-xl leading-relaxed">
                 Se você é um trabalhador da indústria gráfica e{" "}
                 <strong>
                   apaixonado pela arte da impressão e acabamento gráfico
@@ -70,7 +70,7 @@ export default function About() {
                 no mundo da indústria gráfica.
               </p>
 
-              <p className="text-justify text-base leading-relaxed md:text-xl">
+              <p className="text-left text-xl leading-relaxed">
                 <strong>Junte-se a nós no PrintCast</strong> e embarque nessa
                 jornada emocionante de conhecimento, conexões e inspiração.
                 Estamos ansiosos para{" "}

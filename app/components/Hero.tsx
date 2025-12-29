@@ -18,8 +18,8 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gray-200/50"></div>
 
         <div className="max-w-9xl container mx-auto">
-          <div className="relative z-10 flex flex-col items-start justify-center gap-8">
-            <div className="relative h-[280px] w-full max-w-[450px]">
+          <div className="relative z-10 flex flex-col items-center justify-center gap-8 md:items-start">
+            <div className="relative h-[200px] w-full max-w-[320px] md:h-[280px] md:max-w-[450px]">
               <Image
                 src="/images/logo_TVA-PC.webp"
                 alt="ECG PrintCast - O podcast queridinho da indústria gráfica"
