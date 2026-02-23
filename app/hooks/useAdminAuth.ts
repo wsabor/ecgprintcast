@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { verifyPassword } from "@/app/actions/auth";
 
 const AUTH_KEY = "printcast_admin_auth";
-const AUTH_PASSWORD = process.env.NEXT_PUBLIC_AUTH_PASSWORD;
 const SESSION_DURATION = 2 * 60 * 60 * 1000; // 2 horas em milissegundos
 
 interface AuthData {
@@ -44,8 +44,9 @@ export function useAdminAuth() {
     checkAuth();
   }, []);
 
-  const login = (password: string): boolean => {
-    if (password === AUTH_PASSWORD) {
+  const login = async (password: string): Promise<boolean> => {
+    const valid = await verifyPassword(password);
+    if (valid) {
       const authData: AuthData = {
         isAuthenticated: true,
         expiresAt: Date.now() + SESSION_DURATION,

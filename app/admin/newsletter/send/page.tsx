@@ -21,9 +21,9 @@ export default function SendNewsletterPage() {
   const [stats, setStats] = useState({ total: 0, successful: 0, failed: 0 });
 
   // Autenticação com persistência
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    const success = login(password);
+    const success = await login(password);
     if (success) {
       setAuthError("");
       setPassword("");
