@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 const AUTH_KEY = "printcast_admin_auth";
-const AUTH_PASSWORD = process.env.AUTH_PASSWORD;
+const AUTH_PASSWORD = process.env.NEXT_PUBLIC_AUTH_PASSWORD;
 const SESSION_DURATION = 2 * 60 * 60 * 1000; // 2 horas em milissegundos
 
 interface AuthData {
