@@ -8,14 +8,14 @@ export default async function LastEpisodes() {
   return (
     <>
       {/* Seção de últimos episódios - Background azul escuro */}
-      <section className="bg-[#2c4f6f] px-6 py-12 md:px-4 md:py-24">
+      <section className="bg-[#2c4f6f] px-6 py-12">
         <div className="max-w-9xl container mx-auto">
-          <h2 className="mb-4 text-center text-4xl font-bold text-white md:text-5xl">
+          <h2 className="mb-12 text-center text-4xl font-bold text-white">
             Últimos episódios do PrintCast
           </h2>
-          <p className="mb-12 text-center text-2xl text-white/90">
+          {/* <p className="mb-12 text-center text-2xl text-white/90">
             Confira os últimos episódios do PrintCast
-          </p>
+          </p> */}
           {/* Mobile - 6 vídeos */}
           <div className="grid grid-cols-1 gap-6 md:hidden">
             {videos.length > 0
@@ -58,7 +58,7 @@ export default async function LastEpisodes() {
           </div>
 
           {/* Desktop - 9 vídeos */}
-          <div className="hidden gap-8 md:grid md:grid-cols-2 lg:grid-cols-3">
+          <div className="hidden gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
             {videos.length > 0
               ? videos.slice(0, 9).map((video) => (
                   <a

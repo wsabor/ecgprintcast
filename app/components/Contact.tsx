@@ -43,20 +43,20 @@ export default function Contact() {
   };
 
   return (
-    <section id="contato" className="bg-[#bde4db] px-6 py-12 md:px-4 md:py-24">
+    <section id="contato" className="bg-[#bde4db] px-6 py-12">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="mb-12 text-center text-4xl font-bold text-gray-800 md:text-5xl">
+        <h2 className="mb-12 text-center text-4xl font-bold text-gray-800">
           Contato
         </h2>
 
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
           {/* Coluna da esquerda - Texto */}
           <div className="space-y-6">
-            <p className="text-xl leading-relaxed font-semibold text-gray-800 md:text-2xl">
+            <p className="text-xl leading-relaxed font-semibold text-gray-800">
               Queridinho, estamos aqui para ouvir você!
             </p>
 
-            <p className="text-xl leading-relaxed font-medium text-gray-700">
+            <p className="text-lg leading-relaxed font-medium text-gray-700">
               Se você tem alguma dúvida, sugestão ou deseja compartilhar suas
               ideias conosco, preencha o formulário. Teremos o prazer em
               responder o mais rápido possível. Sua opinião é valiosa e queremos
@@ -65,17 +65,17 @@ export default function Contact() {
               maneira possível.
             </p>
 
-            <p className="text-xl font-medium text-gray-700">
+            <p className="text-lg font-medium text-gray-700">
               Obrigado por entrar em contato!
             </p>
 
-            <p className="text-2xl font-semibold text-gray-800">
+            <p className="text-xl font-semibold text-gray-800">
               Equipe do PrintCast
             </p>
           </div>
 
           {/* Coluna da direita - Formulário */}
-          <div className="rounded-xl bg-white p-6 shadow-xl md:p-8">
+          <div className="rounded-xl bg-white p-6 shadow-xl">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <input

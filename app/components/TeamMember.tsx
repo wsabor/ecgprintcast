@@ -18,13 +18,13 @@ export default function TeamMember({
 }: TeamMemberProps) {
   return (
     <div className="flex flex-col items-center rounded-2xl bg-white p-6 text-center shadow-lg transition-transform duration-300 hover:scale-105">
-      <div className="relative mb-4 h-48 w-48 overflow-hidden rounded-full">
+      <div className="relative mb-4 h-40 w-40 overflow-hidden rounded-full">
         <Image src={photo} alt={name} fill className="object-cover" />
       </div>
 
-      <h3 className="mb-3 text-3xl font-bold text-gray-800">{name}</h3>
+      <h3 className="mb-3 text-2xl font-bold text-gray-800">{name}</h3>
 
-      <p className="mb-6 flex-grow text-lg text-gray-600">{bio}</p>
+      <p className="mb-6 flex-grow text-base text-gray-600">{bio}</p>
 
       <div className="flex gap-4">
         <a

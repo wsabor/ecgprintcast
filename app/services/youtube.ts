@@ -1,3 +1,13 @@
+function decodeHtmlEntities(text: string): string {
+  return text
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'");
+}
+
 export interface YouTubeVideo {
   id: string;
   title: string;
@@ -31,7 +41,7 @@ export async function getLatestYouTubeVideos(
 
     return data.items.map((item: any) => ({
       id: item.id.videoId,
-      title: item.snippet.title,
+      title: decodeHtmlEntities(item.snippet.title),
       thumbnail: item.snippet.thumbnails.medium.url,
       publishedAt: item.snippet.publishedAt,
       videoId: item.id.videoId,

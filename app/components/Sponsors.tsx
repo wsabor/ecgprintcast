@@ -91,29 +91,26 @@ export default function Sponsors() {
   };
 
   return (
-    <section
-      id="patrocinadores"
-      className="bg-[#e5e5e5] px-6 py-12 md:px-4 md:py-24"
-    >
+    <section id="patrocinadores" className="bg-[#e5e5e5] px-6 py-12">
       <div className="container mx-auto max-w-7xl">
-        <h2 className="mb-8 text-center text-4xl font-bold text-gray-800 md:mb-12 md:text-5xl">
+        <h2 className="mb-8 text-center text-4xl font-bold text-gray-800 md:mb-12">
           Patrocinadores
         </h2>
 
         {/* Carrossel Desktop - mostra 3 cards */}
         <div className="hidden lg:block">
-          <div className="relative">
+          <div className="relative px-16">
             {/* Botão Anterior */}
             <button
               onClick={handlePrev}
-              className="absolute top-1/2 left-0 z-10 flex h-12 w-12 -translate-x-16 -translate-y-1/2 items-center justify-center rounded-full bg-gray-400 text-white shadow-lg transition-all hover:scale-110 hover:bg-gray-500"
+              className="absolute top-1/2 left-0 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-gray-400 text-white shadow-lg transition-all hover:scale-110 hover:bg-gray-500"
               aria-label="Patrocinador anterior"
             >
               <FaChevronLeft className="text-xl" />
             </button>
 
             <div
-              className="grid grid-cols-3 gap-12"
+              className="grid grid-cols-3 gap-6"
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
             >
@@ -130,7 +127,7 @@ export default function Sponsors() {
             {/* Botão Próximo */}
             <button
               onClick={handleNext}
-              className="absolute top-1/2 right-0 z-10 flex h-12 w-12 translate-x-16 -translate-y-1/2 items-center justify-center rounded-full bg-gray-400 text-white shadow-lg transition-all hover:scale-110 hover:bg-gray-500"
+              className="absolute top-1/2 right-0 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-gray-400 text-white shadow-lg transition-all hover:scale-110 hover:bg-gray-500"
               aria-label="Próximo patrocinador"
             >
               <FaChevronRight className="text-xl" />

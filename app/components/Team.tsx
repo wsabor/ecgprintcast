@@ -26,13 +26,13 @@ export default function Team() {
   ];
 
   return (
-    <section id="equipe" className="bg-[#bde4db] px-6 py-12 md:px-4 md:py-24">
+    <section id="equipe" className="bg-[#bde4db] px-6 py-12 md:px-16">
       <div className="container mx-auto max-w-7xl">
-        <h2 className="mb-8 text-center text-4xl font-bold text-gray-800 md:mb-12 md:text-5xl">
+        <h2 className="mb-8 text-center text-4xl font-bold text-gray-800 md:mb-12">
           Equipe do PrintCast
         </h2>
 
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {teamMembers.map((member) => (
             <TeamMember key={member.name} {...member} />
           ))}

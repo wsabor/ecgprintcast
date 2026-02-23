@@ -4,7 +4,7 @@ export default function About() {
       {/* Seção Sobre - Background verde água claro */}
       <section
         id="sobre"
-        className="relative bg-[#d5ebe5] px-6 py-12 md:px-4 md:py-24"
+        className="relative bg-[#d5ebe5] px-6 py-12"
         style={{
           backgroundImage: "url(/images/icon-mic.png)",
           backgroundPosition: "center center",
@@ -18,7 +18,7 @@ export default function About() {
         <div className="relative z-10 container mx-auto max-w-6xl">
           <div className="flex flex-col items-center">
             {/* Título principal */}
-            <h2 className="mb-8 max-w-4xl text-center text-2xl font-bold text-gray-800 md:text-3xl md:text-4xl">
+            <h2 className="mb-8 max-w-4xl text-center text-2xl font-bold text-gray-800 md:text-3xl">
               PrintCast: conectando a indústria gráfica e fomentando um
               networking valioso!
             </h2>
